@@ -4,99 +4,66 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Virtual_Pet
+namespace VirtualPet
 {
-    class VirtualPet
+    class PET
     {
         // instance variables
-        private int hunger;
-        private int thirst;
-        private int boredom;
-        private int tiredness;
-        private int selection;
+        public int hunger { get; set; }
+        public int thirst;
+        public int boredom;
+        public int tiredness;
+        public int chooser;
+
+        private int hungerLevel;
+        private int thirstLevel;
+        private int boredomLevel;
+        private int tirednessLevel;
+
+
+
         // properties
-        public int Selection()
+        public PET ()
         {
-           
-            return selection;
-        }
-
-
-        public int Hunger
-        {
-            get
-            {
-                return hunger;
-            }
-            set
-            {
-                hunger = value;
-            }
-        }
-
-        public int Thirst
-        {
-            get
-            {
-                return thirst;
-            }
-            set
-            {
-                if (value < 0)
-                    thirst = 1;
-                else
-                    thirst = value;
-            }
-        }
-        public int Boredom
-        {
-            get
-            {
-                return boredom;
-            }
-            set
-            {
-                boredom = value;
-            }
-        }
-
-        public int Tiredness
-        {
-            get
-            {
-                return tiredness;
-            }
-            set
-            {
-                if (value < 0)
-                    tiredness = 1;
-                else
-                    tiredness = value;
-            }
 
         }
 
-        // methods
-        public void DisplayMessage()
+        public PET (int HungerLevel, int ThirstLevel, int BoredomLevel, int TirednessLevel)
         {
-            Console.WriteLine("Hunger is ", Hunger);
-            Console.WriteLine("Thirst is ", Thirst);
-            Console.WriteLine("Boredom is ", Boredom);
-            Console.WriteLine("Tiredness is ", Tiredness);
+            hungerLevel = HungerLevel;
+            thirstLevel = ThirstLevel;
+            boredomLevel = BoredomLevel;
+            tirednessLevel = TirednessLevel;
         }
-        
 
-    // contructors
-    public VirtualPet(int hunger, int thirst, int boredom, int tiredness)
+        public void hungerSassy()
         {
-            Hunger = hunger;
-            Thirst = thirst;
-            Boredom = boredom;
-            Tiredness = tiredness;
+
+            hunger = hunger + 5;
+                
+        }
+
+        public int thirstSassy()
+        {
+
+            return 8;
+        }
+
+        public int boredomSassy()
+        {
+
+            return 9;
+        }
+
+
+        public int tirednessSassy()
+        {
+            return 10;
+
         }
 
 
 
     }
-    
+
 }

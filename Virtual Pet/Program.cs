@@ -10,30 +10,77 @@ namespace VirtualPet
 {
     class Program
     {
-
+        
         static void Main(string[] args)
         {
-            VirtualPet myPet = newVirtualPet();
+            PET Sassy = new PET(50, 50, 50, 50);
+            //VirtualPet virtualPet = new VirtualPet ();
 
             Console.WriteLine("Sassy the Dog");
 
-            Console.WriteLine("Hunger - ");
-            Console.WriteLine("Thirst - ");
-            Console.WriteLine("Boredom - ");
-            Console.WriteLine("Tiredness - ");
+            Console.WriteLine("Hunger -  {0}", Sassy.hunger);
+            Console.WriteLine("Thirst - {0}", Sassy.thirst);
+            Console.WriteLine("Boredom - {0}", Sassy.boredom);
+            Console.WriteLine("Tiredness - {0}", Sassy.tiredness);
 
-            while (true) ;
+            while (true) 
             {
+               
                 Console.WriteLine("What do you want to do?");
-                Console.WriteLine("1) Feed Sassy");
+                Console.WriteLine("1) Feed Sassy;");
                 Console.WriteLine("2) Water Sassy");
                 Console.WriteLine("3) Play with Sassy");
                 Console.WriteLine("4) Put Sassy to sleep");
                 Console.WriteLine("5) Do nothing");
 
-                myPet.Selection = Convert.ToInt32(Console.ReadLine());
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                if (choice == 1)
+
+                {
+                    Sassy.hungerSassy();
+
+
+                }
+
+                else if (choice == 2)
+
+                {
+
+                    Sassy.thirstSassy();
+                }
+
+                else if (choice == 3)
+
+                {
+
+                    Sassy.boredomSassy();
+
+                }
+
+                else if (choice == 4)
+
+                {
+                    Sassy.tirednessSassy();
+                }
+                else if (choice == 5) 
+                    {
+                    break;
+                    }
+                else
+
+                {
+
+                    Console.WriteLine("Please enter a number between 1-4");
+
+                }
 
             }
+
+       
+
+
         }
     }
+    
 }
