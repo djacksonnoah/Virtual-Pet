@@ -18,14 +18,14 @@ namespace VirtualPet
 
             Console.WriteLine("Sassy the Dog");
 
-            Console.WriteLine("Hunger -  {0}", Sassy.hunger);
-            Console.WriteLine("Thirst - {0}", Sassy.thirst);
-            Console.WriteLine("Boredom - {0}", Sassy.boredom);
-            Console.WriteLine("Tiredness - {0}", Sassy.tiredness);
+            Console.WriteLine("Hunger:  {0}", Sassy.hunger);
+            Console.WriteLine("Thirst: {0}", Sassy.thirst);
+            Console.WriteLine("Boredom: {0}", Sassy.boredom);
+            Console.WriteLine("Tiredness: {0}", Sassy.tiredness);
 
-            while (true) 
+            while (true)
             {
-               
+
                 Console.WriteLine("What do you want to do?");
                 Console.WriteLine("1) Feed Sassy;");
                 Console.WriteLine("2) Water Sassy");
@@ -63,10 +63,14 @@ namespace VirtualPet
                 {
                     Sassy.tirednessSassy();
                 }
-                else if (choice == 5) 
-                    {
+                else if (choice == 5)
+
+                {
+                    Console.WriteLine("Woof, Woof!  Thanks for playing.");
+                    Console.ReadKey();
                     break;
-                    }
+                }
+
                 else
 
                 {
@@ -75,11 +79,18 @@ namespace VirtualPet
 
                 }
 
+
+                Console.WriteLine("Sassy has changed.  Now her conditions are as follows:");
+                Console.WriteLine("Hunger:  {0}", Sassy.hunger);
+                Console.WriteLine("Thirst: {0}", Sassy.thirst);
+                Console.WriteLine("Boredom: {0}", Sassy.boredom);
+                Console.WriteLine("Tiredness: {0}", Sassy.tiredness);
+                Console.ReadKey();
+            
+
+             
+
             }
-
-       
-
-
         }
     }
     
