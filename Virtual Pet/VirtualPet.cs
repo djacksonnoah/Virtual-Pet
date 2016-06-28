@@ -13,26 +13,22 @@ namespace VirtualPet
         public int thirst { get; set; }
         public int boredom { get; set; }
         public int tiredness { get; set; }
-        public int chooser { get; set; }
+        // public int addAFew { get; set; }
 
         // private int HungerLevel;
         // private int thirstLevel;
         // private int boredomLevel;
         // private int tirednessLevel;
 
-    
+
         // properties
-        public PET ()
+        public PET()
         {
 
         }
 
-        public PET (int HungerLevel, int ThirstLevel, int BoredomLevel, int TirednessLevel)
+        public PET(int HungerLevel, int ThirstLevel, int BoredomLevel, int TirednessLevel, int AddAFew)
         {
-            hunger = HungerLevel;
-            thirst = ThirstLevel;
-            boredom = BoredomLevel;
-            tiredness = TirednessLevel;
         }
 
         public void hungerSassy()
@@ -42,7 +38,7 @@ namespace VirtualPet
             thirst = thirst + 10;
             boredom = boredom - 31;
             tiredness = tiredness - 15;
-                
+
         }
 
         public void thirstSassy()
@@ -72,24 +68,49 @@ namespace VirtualPet
             tiredness = tiredness - 45; ;
 
         }
+        public void Tick()
+        {
+
+            int AddAFew;
+            Random random = new Random();
+            AddAFew = random.Next();
+            if (AddAFew <= 10 && AddAFew > 0)
+            {
+                hunger = hunger + AddAFew;
+                thirst = thirst + AddAFew;
+                boredom = boredom + AddAFew;
+                tiredness = tiredness + AddAFew;
+
+                //Console.WriteLine("Sassy has changed.  Now her conditions are as follows:");
+                Console.WriteLine("Hunger:  {0}", hunger);
+                Console.WriteLine("Thirst: {0}", thirst);
+                Console.WriteLine("Boredom: {0}", boredom);
+                Console.WriteLine("Tiredness: {0}", tiredness);
+
+            }
+            else
+            {
+                hunger = hunger + 4;
+                thirst = thirst + 6;
+                boredom = boredom + 7;
+                tiredness = tiredness + 9;
+
+                //Console.WriteLine("Sassy has changed.  Now her conditions are as follows:");
+                Console.WriteLine("Hunger:  {0}", hunger);
+                Console.WriteLine("Thirst: {0}", thirst);
+                Console.WriteLine("Boredom: {0}", boredom);
+                Console.WriteLine("Tiredness: {0}", tiredness);
+
+            }
+
+        }
 
 
-        // private int myTimer;
-        // private int ProcessTick;
-
-
-        // myTimer();
-        // ProcessTick();
-
-        // private void MyTimer_Tick(...)
-        // {
-        //    ProcessTick();
-        // }
-
-        // private void ProcessTick()
-       // {
-       //
 
     }
 
+
+
 }
+
+
