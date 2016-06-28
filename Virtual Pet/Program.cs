@@ -17,10 +17,31 @@ namespace VirtualPet
             //VirtualPet virtualPet = new VirtualPet ();
 
             Console.WriteLine("Sassy the Dog");
+            Console.WriteLine("Sassy is a virtual Pet.  Sassy needs to be fed, watered, played with, and put to sleep.");
+            Console.WriteLine("Positive numbers mean she is sad because , for example, she needs to eat.");
+            Console.WriteLine("Negative numbers mean she is happy.  Please try to make Sassy happy.");
+            for (int row = 0; row < 5; row++)
+            {
+                for (int space = 0; space < 5 - row - 1; space++)
+                {
+                    Console.Write(" ");
+                }
 
-            Console.WriteLine("Hunger:  {0}", Sassy.hunger = 50);
-            Console.WriteLine("Thirst: {0}", Sassy.thirst = 50);
-            Console.WriteLine("Boredom: {0}", Sassy.boredom = 50);
+                for (int star = 0; star < row * 2 + 1; star++)
+                {
+                    Console.Write("*");
+                }
+
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Hit any key to play Sassy the Dog.");
+            Console.ReadKey();
+
+
+            Console.WriteLine("Hunger:  {0}", Sassy.hunger = 20);
+            Console.WriteLine("Thirst: {0}", Sassy.thirst = 15);
+            Console.WriteLine("Boredom: {0}", Sassy.boredom = 10);
             Console.WriteLine("Tiredness: {0}", Sassy.tiredness = 50);
             Console.WriteLine("Hit any key to continue.");
             Console.ReadKey();
